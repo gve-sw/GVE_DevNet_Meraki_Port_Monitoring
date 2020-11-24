@@ -26,7 +26,10 @@ Required Packages
 ```
 # Create a Virtual Environment
 python3 -m venv Virtual_Environment
-source Virtual_Environment/bin/activate
+
+# Activate Virtual Environment
+source Virtual_Environment/bin/activate # (MacOS)
+Virtual_Environment/Scripts/activate # (Windows)
 
 # Install Dependencies
 pip install -r requirements.txt
@@ -36,7 +39,11 @@ pip install -r requirements.txt
 Once Dependencies are installed to Environment:
 ```
 # Setup Flask application
-export FLASK_APP=src
+export FLASK_APP=src # (MacOS)
+set FLASK_APP=src # (Windows Command Prompt)
+$env:FLASK_APP = "src" # (Windows PowerShell)
+
+# Enable Development Features
 export FLASK_ENV=development
 
 # Start Application
@@ -44,6 +51,12 @@ flask run
 ```
 
 # Documentation
+### User Interface (Dashboard)
+![/src/static/img/ui.png](src/static/img/ui.png)
+
+### High-Level Diagram
+![/src/static/img/hld.png](src/static/img/hld.png)
+
 ### Developer Resources
 - Meraki API Reference - [See Docs](https://developer.cisco.com/meraki/api-v1/)
 - Flask Application Framework - [See Docs](https://flask.palletsprojects.com/en/1.1.x/)

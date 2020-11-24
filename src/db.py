@@ -49,7 +49,7 @@ def get_db():
     return g.db
 
 
-def close_db():
+def close_db(e=None):
     """
     End the database connection
     :return:
